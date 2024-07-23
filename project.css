@@ -1,0 +1,134 @@
+body {
+    /*background-color: #000; / Black background */
+    background-image: url(photos/starnight.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif; /* Stylish font */
+    margin: 0;
+    padding: 0;
+    color: #00ffff; /* Aqua text color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure spacing between logo and nav links */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 0 5px; /* Adjust padding to the header */
+}
+
+.logo {
+    margin-right: auto; /* Push the logo to the extreme left */
+    width: 75px; /* Diameter of the circle */
+    height: 75px; /* Diameter of the circle */
+    border-radius: 50%; /* Makes the element circular */
+    background-color: #00ffff; /* Background color of the circle */
+    color: #000; /* Text color inside the circle */
+    font-size: 1cm; /* Font size of the text */
+    font-weight: 700; /* Bold text */
+    text-align: center; /* Center the text horizontally */
+    line-height: 75px; /* Center the text vertically */
+    box-shadow: 0 0 10px #00ffff; /* Glowing effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    box-shadow: 0 0 20px #00cccc; /* Enhanced glowing effect on hover */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    flex-grow: 1; /* Allow navbar to take up remaining space */
+    font-size: 1.2em; /* Slightly larger font size */
+    position: relative; /* Ensure relative positioning for the underline */
+    padding: 10px 0; /* Adjust padding for vertical centering */
+    margin:0;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0; /* Starts from 25% from the left */
+    width:100%;
+    height: 2px; /* Adjust the height of the underline as needed */
+    background-color: #00ffff; /* Aqua underline color */
+    box-shadow: 0 0 5px #00ffff; /* Subtle glowing effect */
+}
+
+.navbar a {
+    margin-right: 40px; /* Adjust the value as needed */
+    text-decoration: none; /* Remove underline from links */
+    color: #00ffff; /* Set link color */
+    font-weight: 700; /* Bold text */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for hover effect */
+    text-shadow: 0 0 3px #00ffff; /* Subtle glowing text effect */
+}
+
+
+.navbar a:hover {
+    color: #00cccc; /* Slightly different color on hover */
+    text-shadow: 0 0 5px #00cccc; /* Enhanced glowing effect on hover */
+}
+
+.projects {
+    padding: 100px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center align content */
+    color: #00ffff; /* Aqua text color */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow projects to wrap to the next line if needed */
+    justify-content: center; /* Center align projects horizontally */
+    gap: 20px; /* Space between project boxes */
+}
+
+.project {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border: 2px solid #00ffff; /* Aqua border color */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Aqua glowing shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    width: 500px; /* Fixed width for project boxes */
+    margin: 20px; /* Margin for spacing around project boxes */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7); /* Enhanced glowing shadow on hover */
+}
+
+.project img {
+    width: 100%; /* Full width of the project box */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the entire area, cropping the image if necessary */
+    border-bottom: 2px solid #00ffff;
+   
+}
+
+.project-info {
+    padding: 10px; /* Padding inside the project info box */
+    text-align: left;
+     
+}
+
+.project-info h3 {
+    font-size: 1.5em; /* Project title font size */
+    margin-bottom: 10px;
+    color: #00ffff; /* Aqua text color for titles */
+}
+
+.project-info p {
+    font-size: 1.2em; /* Project description font size */
+    line-height: 1.6;
+    color: #ffffff; /* White text color for descriptions */
+}
